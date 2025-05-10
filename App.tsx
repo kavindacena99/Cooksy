@@ -1,12 +1,11 @@
 import React from 'react';
-import { View,Text } from 'react-native';
 import './css/global.css';
+import 'react-native-gesture-handler';
+import AppNavigator from './src/navigation/AppNavigator';
 
 function App(){
   return(
-    <View>
-      <Text style={{marginTop:30,marginLeft:30,fontSize:35}}  className="text-black text-lg font-bold">Welcome</Text>
-    </View>
+    <AppNavigator />
   );
 }
 
