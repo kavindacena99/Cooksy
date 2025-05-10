@@ -1,2 +1,2 @@
 # Cooksy
-Food receipe app with react native
+Food receipe app with react native!
