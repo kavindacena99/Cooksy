@@ -3,7 +3,11 @@ module.exports = {
   content: ["./App.tsx","./src/components/**/*.{ts,tsx}"],
   presets:[require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        nosifer:['Nosifer_400Regular']
+      }
+    },
   },
   plugins: [],
 }

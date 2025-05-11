@@ -9,10 +9,10 @@ function RecipeDetailScreen(){
     const { recipe } = route.params;
 
     return(
-        <View className='flex-1 bg-white p-4'>
-            <Image source={{ uri:recipe.image }} className='h-60 w-full rounded-xl mb-4' />
-            <Text className='text-3xl font-bold text-purple-700 mb-2'>{recipe.title}</Text>
-            <Text className='text-base text-gray-700'>This is a placeholder</Text>
+        <View className='flex-1 p-4 rounded-xl'>
+            <Text style={{ marginTop:5,marginBottom:20,color:'orange',fontSize:35 }} className='font-bold mb-2'>{recipe.title}</Text>
+            <Image source={{ uri: recipe.image }} className="h-40 w-full rounded-xl" />
+            <Text style={{ marginTop:18,fontSize:18 }} className='text-base text-gray-700'>{recipe.description}</Text>
         </View>
     );
 }

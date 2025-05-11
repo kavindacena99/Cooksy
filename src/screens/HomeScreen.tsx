@@ -5,6 +5,7 @@ import RecipeCard from '../components/RecipeCard';
 import { Recipe } from '../data/recipes';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
+import Header from '../components/Header';
 
 type RootStackParamList = {
     Home: undefined;
@@ -14,11 +15,12 @@ type RootStackParamList = {
 function HomeScreen(){
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
     return(
-        <ScrollView className='flex-1 bg-gray-50 p-4'>
-            <Text className='text-3xl font-bold text-purple-700 mb-4 text-center'>Cooksy</Text>
+        <ScrollView className='flex-1 p-4'>
+            <Header />
             {recipes.map((recipe) => (
                 <RecipeCard key={recipe.id} recipe={recipe} onPress={() => navigation.navigate('RecipeDetail',{ recipe })} />
             ))}
+            <View style={{ marginBottom:20 }} />
         </ScrollView>
     );
 }

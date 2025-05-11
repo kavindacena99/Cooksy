@@ -15,7 +15,7 @@ export default function RecipeCard({ recipe, onPress }: Props) {
     >
       <Image source={{ uri: recipe.image }} className="h-40 w-full" />
       <View className="p-4">
-        <Text className="text-lg font-semibold">{recipe.title}</Text>
+        <Text className="text-lg font-bold">{recipe.title}</Text>
       </View>
     </TouchableOpacity>
   );
